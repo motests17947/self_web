@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$default-blue: #009EBE;
+$defualt-orange: #FFA115;
+$default-red: #f87171;
+
+.self-block {
+  @apply w-full h-fit p-5 bg-slate-600 text-white rounded-md;
+}
