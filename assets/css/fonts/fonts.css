@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'NotoSansTC-Black';
+  src: url('./NotoSansTC-Black.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-Bold';
+  src: url('./NotoSansTC-Bold.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-ExtraBold';
+  src: url('./NotoSansTC-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-ExtraLight';
+  src: url('./NotoSansTC-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-Light';
+  src: url('./NotoSansTC-Light.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-Medium';
+  src: url('./NotoSansTC-Medium.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-Regular';
+  src: url('./NotoSansTC-Regular.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-SemiBold';
+  src: url('./NotoSansTC-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'NotoSansTC-Thin';
+  src: url('./NotoSansTC-Thin.ttf');
+}
+/* Outfit */
+@font-face {
+  font-family: 'Outfit-Thin';
+  src: url('./Outfit-Thin.ttf');
+}
+@font-face {
+  font-family: 'Outfit-Black';
+  src: url('./Outfit-Black.ttf');
+}
+@font-face {
+  font-family: 'Outfit-Bold';
+  src: url('./Outfit-Bold.ttf');
+}
+@font-face {
+  font-family: 'Outfit-ExtraBold';
+  src: url('./Outfit-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'Outfit-ExtraLight';
+  src: url('./Outfit-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'Outfit-Light';
+  src: url('./Outfit-Light.ttf');
+}
+@font-face {
+  font-family: 'Outfit-Medium';
+  src: url('./Outfit-Medium.ttf');
+}
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url('./Outfit-Regular.ttf');
+}
+@font-face {
+  font-family: 'Outfit-SemiBold';
+  src: url('./Outfit-SemiBold.ttf');
+}

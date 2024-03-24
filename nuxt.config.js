@@ -20,9 +20,22 @@ export default defineNuxtConfig({
     lintOnStart: false, // 專案啟動時不自動檢查所有相關檔案
     chokidar: true      // 監聽文件異動進行檢核（文件未列出此選項）
   },
-  css: ['../assets/css/main.scss'],
+  css: [
+    '../assets/css/main.scss', 
+    '../assets/css/fonts/fonts.css'
+  ],
   build: {
     extractCSS: true,
   },
-  buildModules: ['@nuxtjs/tailwindcss'],
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts'
+  ],
+  googleFonts: {
+    families: {
+      // 指定您想要的字體
+      Roboto: true,
+      'Open+Sans': true,
+    },
+  },
 })
