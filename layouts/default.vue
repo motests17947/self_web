@@ -1,8 +1,10 @@
 <template>
   <div id="default_layout" :class="layout_mode">
-    <LayoutBanner :layoutMode="layout_mode"/>
-    <LayoutHeader />
-    <slot id="slot"/>
+    <LayoutBanner 
+      :layoutMode="layout_mode"
+      id="layout_banner"
+    />
+    <NuxtPage id="page" :layoutMode="layout_mode" />
     <LayoutFooter
       id="layout_footer"
       :layoutMode="layout_mode"
@@ -28,10 +30,14 @@ export default {
   font-family: 'NotoSansTC-Medium';
 }
 
-#slot {
+#layout_banner {
+  @apply fixed inset-0 w-full h-[30px];
+}
+
+#page {
   @apply w-full relative overflow-auto;
   overflow: overlay;
-  height: calc(100% - 40px);
+  height: calc(100% - 60px);
 }
 
 #layout_footer {

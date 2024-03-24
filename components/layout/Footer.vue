@@ -1,6 +1,6 @@
 <template>
   <div id="FooterComponent" class="footer-style" :class="layoutMode">
-    <p class="footer-right">Motests.Tw ©︎ 2024-2006 All Rights Reserved.</p>
+    <p class="footer-right">Motests.Tw ©︎ 2024 All Rights Reserved.</p>
     <ToolsSwitchBtn
       id="footer_switch_btn"
       :switchValue="{on: 'Light', off: 'Dark'}"
@@ -39,12 +39,21 @@ export default {
   }
 
   &-right {
-    @apply text-sm text-white;
+    @apply text-xs text-white;
     font-family: 'Outfit-Regular';
+
+    @media (max-width: 640px) {
+      @apply text-[10px];
+      font-family: 'Outfit-thin';
+    }
   }
 }
 
 #footer_switch_btn {
   @apply absolute right-5 top-[1px];
+
+  @media (max-width: 640px) {
+    @apply hidden;
+  }
 }
 </style>

@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
-    // '@nuxtjs/style-resources',
+    '@pinia/nuxt'
   ],
   stylelint: {
     lintOnStart: false, // 專案啟動時不自動檢查所有相關檔案
@@ -33,7 +33,6 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      // 指定您想要的字體
       Roboto: true,
       'Open+Sans': true,
     },

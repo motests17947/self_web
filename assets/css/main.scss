@@ -6,3 +6,21 @@ $default-blue: #009EBE;
 $defualt-orange: #FFA115;
 $default-red: #f87171;
 
+.index-page {
+  @apply w-full h-full overflow-hidden py-[30px] mt-[30px];
+  font-family: 'NotoSansTC-Regula';
+  transition: all 0.3s linear;
+
+  @media (max-width: 800px) {
+    @apply h-[35vh];
+    font-family: 'NotoSansTC-Regula';
+  }
+}
+
+.index-page.light {
+  @apply bg-white bg-opacity-0;
+}
+
+.index-page.dark {
+  @apply bg-slate-800 text-white;
+}
