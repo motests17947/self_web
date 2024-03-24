@@ -17,6 +17,7 @@
         :class="page === 'skill' ? 'active' : ''"
         to="/skill"
       >技能</NuxtLink >
+      <button v-show="is_mobile_mode" class="mode_change" @click="getColorMode()">{{ layout_mode === 'dark' ? 'Dark' : 'Light' }}</button>
     </div>
   </div>
 </template>
@@ -25,24 +26,47 @@ export default {
   props: {
     layoutMode: String,
   },
+  emit: ['changeLayoutMode'],
   setup(props, ctx) {
+    const layout_mode = computed<string>(() => {return props.layoutMode})
     const page = computed<string>(() => {
       return useRoute().name
     })
+
+    const is_mobile_mode = computed<boolean>(() => {
+      const mediaQuery = window.matchMedia("(max-width: 800px)");
+
+      return mediaQuery.matches
+    })
+
+    const getColorMode = () => {
+      ctx.emit('changeLayoutMode', layout_mode.value === 'dark' ? 'light' : 'dark')
+    }
     
     return {
-      page
+      page,
+      layout_mode,
+      getColorMode,
+      is_mobile_mode
     }
   }
 }
 </script>
 <style lang="scss" scoped>
+.mode_change {
+  @apply w-[50px] bg-black bg-opacity-60 hover:bg-opacity-100 border-white border-[1px] text-xs rounded-md;
+}
+
 .banner-style {
   @apply px-[10px] flex flex-nowrap items-center justify-between;
   transition: all 0.3s linear;
 
   &.light {
     @apply bg-slate-300 text-gray-700;
+
+    .mode_change {
+      @apply bg-white text-[text-gray-700];
+    }
   }
 
   &.dark {
@@ -66,4 +90,6 @@ export default {
     border-bottom: 4px solid rgb(0, 191, 216);
   }
 }
+
+
 </style>

@@ -3,6 +3,7 @@
     <LayoutBanner 
       :layoutMode="layout_mode"
       id="layout_banner"
+      @changeLayoutMode="layout_mode = $event"
     />
     <NuxtPage id="page" :layoutMode="layout_mode" />
     <LayoutFooter

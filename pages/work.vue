@@ -148,14 +148,6 @@ export default {
     padding: 0 0 4em 0;
   }
 
-  .example-header {
-    background: #3D4351;
-    color: #FFF;
-    font-weight: 300;
-    padding: 3em 1em;
-    text-align: center;
-  }
-
   .timeline {
     @apply leading-[1.4em] m-0 p-0 w-full;
     list-style: none;
@@ -263,7 +255,7 @@ export default {
   }
 
   .timeline-split {
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
       .timeline {
         display: table;
       }
@@ -293,11 +285,35 @@ export default {
         padding-right: 30px;
       }
 
+      .timeline-title {
+        @apply text-base;
+        letter-spacing: 1px;
+      }
+
       .period .timeline-title {
         position: relative;
         left: -45px;
       }
     }
+  }
+
+  @media (min-width: 800px) {
+    .timeline-content {
+    .timeline-title {
+      @apply text-base;
+      font-family: 'NotoSansTC-Bold';
+      margin: 0;
+      letter-spacing: 3px;
+    }
+
+    @apply text-sm;
+    font-family: 'NotoSansTC-Regular';
+    padding-bottom: 40px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
   }
 }
 </style>
